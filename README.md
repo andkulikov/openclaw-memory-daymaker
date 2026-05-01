@@ -1,4 +1,4 @@
-# memory-daymaker
+# openclaw-memory-daymaker
 
 Memory Daymaker is an OpenClaw plugin that rebuilds daily memory files from the conversations OpenClaw actually had.
 
