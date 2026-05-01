@@ -23,7 +23,23 @@ This plugin is a maintenance tool for OpenClaw's file-based memory. It is not a 
 
 ## Install
 
-From GitHub after this repository is public:
+Recommended, from ClawHub:
+
+```sh
+openclaw plugins install clawhub:openclaw-memory-daymaker
+openclaw plugins enable memory-daymaker
+openclaw gateway restart
+```
+
+From npm:
+
+```sh
+openclaw plugins install npm:openclaw-memory-daymaker
+openclaw plugins enable memory-daymaker
+openclaw gateway restart
+```
+
+From GitHub:
 
 ```sh
 openclaw plugins install git:github.com/andkulikov/openclaw-memory-daymaker@v0.1.0
@@ -39,13 +55,11 @@ openclaw plugins enable memory-daymaker
 openclaw gateway restart
 ```
 
-From npm after the package is published:
+Package pages:
 
-```sh
-openclaw plugins install npm:openclaw-memory-daymaker
-openclaw plugins enable memory-daymaker
-openclaw gateway restart
-```
+- ClawHub: https://clawhub.ai/plugins/openclaw-memory-daymaker
+- npm: https://www.npmjs.com/package/openclaw-memory-daymaker
+- GitHub: https://github.com/andkulikov/openclaw-memory-daymaker
 
 Then check that OpenClaw can see it:
 
@@ -98,11 +112,7 @@ All fields are optional.
       "memory-daymaker": {
         "enabled": true,
         "config": {
-          "model": "mini",
-          "schedule": {
-            "enabled": true,
-            "time": "00:05"
-          }
+          "model": "mini"
         }
       }
     }
