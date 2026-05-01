@@ -1,5 +1,5 @@
 {
-  "name": "memory-daymaker",
+  "name": "openclaw-memory-daymaker",
   "version": "0.1.0",
   "description": "OpenClaw plugin for daily memory generation from session transcripts.",
   "type": "module",

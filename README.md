@@ -39,6 +39,14 @@ openclaw plugins enable memory-daymaker
 openclaw gateway restart
 ```
 
+From npm after the package is published:
+
+```sh
+openclaw plugins install npm:openclaw-memory-daymaker
+openclaw plugins enable memory-daymaker
+openclaw gateway restart
+```
+
 Then check that OpenClaw can see it:
 
 ```sh
