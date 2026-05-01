@@ -1,0 +1,54 @@
+{
+  "name": "memory-daymaker",
+  "version": "0.1.0",
+  "description": "OpenClaw plugin for daily memory generation from session transcripts.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andkulikov/openclaw-memory-daymaker.git"
+  },
+  "homepage": "https://github.com/andkulikov/openclaw-memory-daymaker#readme",
+  "bugs": {
+    "url": "https://github.com/andkulikov/openclaw-memory-daymaker/issues"
+  },
+  "main": "index.js",
+  "exports": "./index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "memory",
+    "cron",
+    "summarization"
+  ],
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "daymaker.js",
+    "index.js",
+    "openclaw.plugin.json"
+  ],
+  "scripts": {
+    "check:node": "node --check index.js && node --check daymaker.js && node -e \"import('./index.js').then(() => console.log('OK'))\"",
+    "pack:dry-run": "npm pack --dry-run",
+    "release:check": "npm run smoke && npm run pack:dry-run",
+    "smoke": "npm run check:node && npm run test:node",
+    "test:node": "node --test tests/test_index.mjs"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.4.22"
+    },
+    "install": {
+      "minHostVersion": ">=2026.4.22"
+    }
+  }
+}
